@@ -7,6 +7,10 @@ from validate import is_valid_url
 
 st.set_page_config(page_title="Malware Detection Tool", page_icon=":shield:", layout="centered")
 
+@st.cache_resource
+def get_model():
+    return load_model()
+
 with st.sidebar:
     st.header("About")
     st.write(
@@ -31,7 +35,7 @@ if url:
         st.error("Invalid URL format. Please enter a valid URL starting with http:// or https://.")
     else:
         with st.status("Analyzing URL..."):
-            model = load_model()
+            model = get_model()
             result = predict(url, model)
 
         confidence_pct = f"{result['confidence'] * 100:.1f}%"
