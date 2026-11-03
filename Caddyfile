@@ -1,0 +1,3 @@
+urlcheck.nullbit.in {
+	reverse_proxy localhost:8501
+}

@@ -1,0 +1,7 @@
+services:
+  urlcheck:
+    build: .
+    container_name: urlcheck
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8501:8501"

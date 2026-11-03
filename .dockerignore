@@ -1,0 +1,14 @@
+.git
+.gitignore
+malicious_phish.csv
+notebooks/
+training/
+tests/
+upload/
+venv/
+__pycache__/
+*.ipynb
+pyproject.toml
+requirements.txt
+uv.lock
+.streamlit/
